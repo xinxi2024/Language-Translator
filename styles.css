@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in;
+}
+
+.logo h1 {
+    color: #1a73e8;
+    font-size: 52px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo p {
+    color: #5f6368;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.translator {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.translator:hover {
+    transform: translateY(-5px);
+}
+
+.input-section, .output-section {
+    margin-bottom: 25px;
+}
+
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #e8eaed;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #3c4043;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%235F6368' d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E") no-repeat right 15px center;
+}
+
+select:hover, select:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    border: 2px solid #e8eaed;
+    border-radius: 8px;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3c4043;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+textarea:hover {
+    border-color: #1a73e8;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 4px rgba(26,115,232,0.1);
+}
+
+#translateBtn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26,115,232,0.2);
+}
+
+#translateBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(26,115,232,0.3);
+}
+
+#translateBtn:active {
+    transform: translateY(0);
+}
+
+#translateBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计优化 */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .translator {
+        padding: 25px;
+    }
+    
+    .logo h1 {
+        font-size: 42px;
+    }
+    
+    textarea {
+        height: 120px;
+    }
+}
+
+/* 添加暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    }
+    
+    .translator {
+        background: #2d2d2d;
+    }
+    
+    textarea, select {
+        background-color: #3d3d3d;
+        color: #fff;
+        border-color: #4d4d4d;
+    }
+    
+    .logo p {
+        color: #aaa;
+    }
+} 

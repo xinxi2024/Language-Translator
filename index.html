@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sloaner 翻译器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Sloaner</h1>
+            <p>简单好用的翻译工具</p>
+        </div>
+        
+        <div class="translator">
+            <div class="input-section">
+                <select id="fromLang">
+                    <option value="zh">中文</option>
+                    <option value="en">英语</option>
+                    <option value="ja">日语</option>
+                </select>
+                <textarea id="inputText" placeholder="请输入要翻译的文字"></textarea>
+            </div>
+            
+            <button id="translateBtn">翻译</button>
+            
+            <div class="output-section">
+                <select id="toLang">
+                    <option value="en">英语</option>
+                    <option value="zh">中文</option>
+                    <option value="ja">日语</option>
+                </select>
+                <textarea id="outputText" readonly placeholder="翻译结果将显示在这里"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
